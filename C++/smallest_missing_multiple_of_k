@@ -1,0 +1,13 @@
+class Solution {
+public:
+    int missingMultiple(vector<int>& nums, int k) {
+        set<int> numSet(nums.begin(), nums.end());
+        int mult = 1;
+
+        while(true){
+            if (!numSet.contains(mult * k)){return mult * k;}
+            mult++;
+        }
+        return 0;
+    }
+};
